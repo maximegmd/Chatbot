@@ -1,0 +1,1 @@
+{"maxlen": 20, "features": 20000, "labels": ["identity", "hello", "job", "age", "feeling", "good", "bad", "actions", "women", "men", "thanks", "goodbye", "city", "action", "wait", "still there"]}
