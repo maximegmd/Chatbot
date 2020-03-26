@@ -1,3 +1,5 @@
 keras
 scipy
 tensorflow
+flask
+flask-restful

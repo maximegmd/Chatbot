@@ -31,3 +31,12 @@ def load_data(path="data.json", num_words=2000, maxlen=None, seed=113):
         y_train = np.reshape(y_train, (-1, y_train_dim))
 
         return (x_train, y_train, ret_labels)
+
+def load_intents(path="data.json"):
+    with open(path, encoding="utf8") as data_file:
+        data = json.load(data_file)
+        intents = dict()
+        for d in data:
+            intents[d['tag']] = d['responses']
+
+        return intents

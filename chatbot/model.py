@@ -9,7 +9,7 @@ from keras.layers import LSTM
 from keras.layers import Conv1D, MaxPooling1D
 from keras.datasets import imdb
 from keras.models import model_from_json
-import dataset
+from . import dataset
 
 class Model:
     model = None
