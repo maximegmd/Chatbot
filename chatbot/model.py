@@ -1,14 +1,14 @@
 from __future__ import print_function
 
 import json
-from keras.preprocessing import sequence
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation
-from keras.layers import Embedding
-from keras.layers import LSTM
-from keras.layers import Conv1D, MaxPooling1D
-from keras.datasets import imdb
-from keras.models import model_from_json
+from tensorflow.keras.preprocessing import sequence
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import Conv1D, MaxPooling1D
+from tensorflow.keras.datasets import imdb
+from tensorflow.keras.models import model_from_json
 from . import dataset
 
 class Model:

@@ -1,11 +1,9 @@
 from flask import Flask, request, current_app
 from flask_restful import Resource, Api
+from waitress import serve
 from chatbot import dataset
 from chatbot import model
 import random
-import keras.backend.tensorflow_backend as tb
-
-tb._SYMBOLIC_SCOPE.value = True
 
 class FlaskApp(Flask):
     def __init__(self, *args, **kwargs):
@@ -31,4 +29,4 @@ class ChatBot(Resource):
 api.add_resource(ChatBot, '/')
 
 if __name__ == '__main__':
-    app.run(debug=False, threaded=False)
+    serve(app, host='0.0.0.0', port=5000)
