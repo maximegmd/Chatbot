@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 from waitress import serve
 from chatbot import dataset
 from chatbot import model
+import os
 import random
 
 class FlaskApp(Flask):
@@ -28,5 +29,9 @@ class ChatBot(Resource):
 
 api.add_resource(ChatBot, '/')
 
+port = os.environ["PORT"]
+if port is None:
+    port = 80
+
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=port)
